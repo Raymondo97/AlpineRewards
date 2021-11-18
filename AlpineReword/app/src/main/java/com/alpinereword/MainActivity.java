@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         TextView username = (TextView) findViewById(R.id.username);
         TextView password = (TextView) findViewById(R.id.Password);
         MaterialButton button =(MaterialButton) findViewById(R.id.loginBtn);
+        TextView link = (TextView)findViewById(R.id.registerLink);
+        link.setMovementMethod(LinkMovementMethod.getInstance());
 
         //USer and Pass: admin and admin
         button.setOnClickListener(new View.OnClickListener() {
