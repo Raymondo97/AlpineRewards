@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginTop="32dp"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:gravity="center"
+        android:text="Welcome Back!"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter your account here"
+        android:layout_marginTop="280dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/message"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bordes_redondos"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="20dp"
+
+
+        android:hint="@string/UserName"
+        android:padding="20dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bordes_redondos"
+
+        android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+        android:drawableRight="@drawable/visibility"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Password"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+
+
+        android:text="LOGIN" />
+
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+
+        android:text="@string/Register" />
+
+</RelativeLayout>
