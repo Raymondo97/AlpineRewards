@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="424dp"
-        android:layout_height="199dp"
+        android:layout_width="427dp"
+        android:layout_height="211dp"
         android:scaleType="centerCrop"
         android:src="@drawable/green"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,17 +17,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".78"
-        app:layout_constraintVertical_bias="1"
+        android:background="@drawable/view_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".80"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/view_bg"
-        />
+        app:layout_constraintVertical_bias="1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,13 +49,13 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/rewords"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
 
 
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:text="28"
         android:textColor="@color/yellow"
         android:textSize="80dp"
@@ -67,12 +68,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="196dp"
         android:text="Points"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toEndOf="@+id/rewords"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
