@@ -73,7 +73,7 @@
         android:textColor="@color/grey"
         android:textColorHint="@color/grey" />
 
-    
+
 
 
     <com.google.android.material.button.MaterialButton
@@ -99,20 +99,5 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/Register" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/loginBtn"
-        android:layout_below="@+id/username"
-        android:layout_marginTop="-419dp"
-        android:layout_marginBottom="467dp"
-        android:hint="hint" />
 
 </RelativeLayout>
