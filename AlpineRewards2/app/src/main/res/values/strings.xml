@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Alpine Rewards</string>
-    <string name="UserName">User Name</string>
-    <string name="Password">Password</string>
-    <string name="Register"><a href="https://alpineproducts.com/wp-login.php">Forgot Password ? / Register </a></string>
-    <string name="productDesc" />
-</resources>
