@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.icoderman:wc-api-java:1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.icoderman/wc-api-java/1.4/254cb3b07b2eab24905b336b0690e8258ad4007d/wc-api-java-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.icoderman/wc-api-java/1.4/19076493dae9ef1a0831fb87f84aa2cd0cbf7a09/wc-api-java-1.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.icoderman/wc-api-java/1.4/e5b5fb8106185ad3c5d888f0d1ac7f16fb51179d/wc-api-java-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
