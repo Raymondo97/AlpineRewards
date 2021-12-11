@@ -2,6 +2,8 @@ package com.alpinerewards2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -90,7 +92,10 @@ public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: Clicked On:" + products.get(index));
-                Toast.makeText(productContext, products.get(index).getName(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(productContext, products.get(index).getName(), Toast.LENGTH_SHORT).show();
+                Intent viewIntent = new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://alpineproducts.com/product/alpine-tee-shirt/"));
+                productContext.startActivity(viewIntent);
             }
         });
     }
