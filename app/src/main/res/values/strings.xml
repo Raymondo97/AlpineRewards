@@ -2,6 +2,10 @@
     <string name="app_name">Alpine Rewards</string>
     <string name="UserName">User Name</string>
     <string name="Password">Password</string>
-    <string name="Register"><a href="https://alpineproducts.com/my-account-2/">Forgot Password ? / Register </a></string>
+    <string name="Register"><a href="https://alpineproducts.com/my-account-2/">No account? Register here!</a></string>
     <string name="productDesc" />
+    <string name="imageDesc">Alpine Logo</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="infoPrompt">Please enter your account info here:</string>
+    <string name="login">LOGIN</string>
 </resources>
