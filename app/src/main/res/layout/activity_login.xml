@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:contentDescription="@string/imageDesc"
         android:layout_width="match_parent"
         android:layout_height="195dp"
         android:layout_marginTop="32dp"
@@ -20,13 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
         android:gravity="center"
-        android:text="Welcome Back!"
-        android:textSize="40dp"
+        android:text="@string/welcome"
+        android:textSize="40sp"
         android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please enter your account here"
+        android:text="@string/infoPrompt"
         android:layout_marginTop="280dp"
         android:textColor="@color/black"
         android:gravity="center"
@@ -35,6 +36,7 @@
 
     <EditText
         android:id="@+id/username"
+        android:autofillHints="username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/message"
@@ -45,8 +47,8 @@
         android:background="@drawable/bordes_redondos"
         android:drawableStart="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="20dp"
+        android:inputType="text"
         android:imeOptions="actionNext"
-        android:nextFocusDown="@id/Password"
         android:maxLines="1"
 
         android:hint="@string/UserName"
@@ -56,6 +58,7 @@
 
     <EditText
         android:id="@+id/Password"
+        android:autofillHints="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
@@ -87,7 +90,7 @@
         android:layout_margin="10dp"
 
 
-        android:text="LOGIN" />
+        android:text="@string/login" />
 
     <TextView
         android:id="@+id/registerLink"
