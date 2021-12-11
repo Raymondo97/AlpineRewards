@@ -4,10 +4,8 @@ com/alpinerewards2/Rewards.java
  com.alpinerewards2.Rewards
 com/alpinerewards2/APIClient.java
  com.alpinerewards2.APIClient
-com/alpinerewards2/LoginActivity.java
- com.alpinerewards2.LoginActivity
- com.alpinerewards2.LoginActivity$1
- com.alpinerewards2.LoginActivity$2
+com/alpinerewards2/Product.java
+ com.alpinerewards2.Product
 com/alpinerewards2/ProductViewAdapter.java
  com.alpinerewards2.ProductViewAdapter
  com.alpinerewards2.ProductViewAdapter$1
@@ -18,5 +16,7 @@ com/alpinerewards2/UserService.java
  com.alpinerewards2.UserService
 com/alpinerewards2/LoginRequest.java
  com.alpinerewards2.LoginRequest
-com/alpinerewards2/Product.java
- com.alpinerewards2.Product
+com/alpinerewards2/LoginActivity.java
+ com.alpinerewards2.LoginActivity
+ com.alpinerewards2.LoginActivity$1
+ com.alpinerewards2.LoginActivity$2
