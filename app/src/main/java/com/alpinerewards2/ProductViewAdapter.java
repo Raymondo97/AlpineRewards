@@ -4,14 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,11 +20,15 @@ import java.util.ArrayList;
 
 public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.ViewHolder>{
 
+    // Tag string for debugging purposes
     private static final String TAG = "ProductViewAdapter";
+
+    // Product context and ArrayList variables
     private ArrayList<Product> products;
     private final Context productContext;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        // Attributes for product to be displayed in product list item holder
         private final TextView nameView;
         private final TextView priceView;
         private final ImageView imageView;
@@ -40,6 +42,7 @@ public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.
             productLayout = (RelativeLayout) itemView.findViewById(R.id.productInfo);
         }
 
+        // Getters for attributes
         public TextView getNameView() {
             return nameView;
         }
@@ -57,6 +60,10 @@ public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.
         }
     }
 
+    /*
+    * Constructor for adapter
+    * Accepts application context, and product list
+     */
     public ProductViewAdapter(Context context, ArrayList<Product> productData) {
         this.products = productData;
         this.productContext = context;
@@ -65,34 +72,33 @@ public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        Log.d(TAG, "onCreateViewHolder: Creating View Holder");
+        // Inflates product item layout viewholder to current view
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.list_product, viewGroup, false);
 
-        Log.d(TAG, "onCreateViewHolder: Returning View Holder");
+        // Returns the new viewholder
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder,
                      @SuppressLint("RecyclerView") final int index) {
-        Log.d(TAG, "onBindViewHolder: Binding Product Name");
+        // Loads product price and name to product view
         viewHolder.getNameView().setText(this.products.get(index).getName());
-        Log.d(TAG, "onBindViewHolder: Binding Product Price");
         viewHolder.getPriceView().setText(this.products.get(index).getRegular_price());
 
-        Log.d(TAG, "onBindViewHolder: Rendering Picture");
+        // Loads product image to be displayed
         Glide.with(productContext)
                 .asBitmap()
-                .load(this.products.get(index).getImage())
+                .load(this.products.get(index).getImages())
                 .into(viewHolder.imageView);
 
-        Log.d(TAG, "onBindViewHolder: Setting Click Listener");
+        // Set on click listener for product redirection
         viewHolder.productLayout.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: Clicked On:" + products.get(index));
-//                Toast.makeText(productContext, products.get(index).getName(), Toast.LENGTH_SHORT).show();
+                // When product clicked on, redirect to product's webpage
                 Intent viewIntent = new Intent("android.intent.action.VIEW",
                                 Uri.parse("https://alpineproducts.com/product/alpine-tee-shirt/"));
                 productContext.startActivity(viewIntent);
@@ -100,13 +106,11 @@ public class ProductViewAdapter extends RecyclerView.Adapter<ProductViewAdapter.
         });
     }
 
+    /*
+    * Returns the size of the product list
+    */
     @Override
     public int getItemCount() {
         return this.products.size();
-    }
-
-    public void updateList(ArrayList<Product> givenList) {
-        products.clear();
-        products.addAll(givenList);
     }
 }

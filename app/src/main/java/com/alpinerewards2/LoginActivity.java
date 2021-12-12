@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Attaches variables to appropriate views
         TextView username = (TextView) findViewById(R.id.username);
         TextView password = (TextView) findViewById(R.id.Password);
         MaterialButton button = (MaterialButton) findViewById(R.id.loginBtn);
